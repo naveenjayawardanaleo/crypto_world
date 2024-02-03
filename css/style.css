@@ -1,0 +1,593 @@
+/* Define font faces using @font-face */
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url("path/to/SegoeUI.woff2") format("woff2");
+  /* Add other src formats if available */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("path/to/Roboto.woff2") format("woff2");
+  /* Add other src formats if available */
+  font-display: swap;
+}
+
+/* Add @font-face rules for other font families used in the body */
+
+/* Apply the fonts using font-family in appropriate elements */
+
+body {
+  font-family: "system-ui", -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  color: #797979;
+}
+
+/* body {
+    font-family: "system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"";
+  
+    font-size: 16px;
+  
+    color: #797979;
+  } */
+
+.main-logo {
+  width: 250px;
+}
+
+.main-navigation li {
+  margin-right: 5px;
+
+  margin-left: 5px;
+}
+
+.main-navigation li a {
+  font-weight: 500;
+
+  color: white;
+}
+
+.slider-overlay {
+  background-color: #0000008f;
+
+  border-radius: 20px;
+}
+
+.header-style {
+  background-color: white;
+
+  z-index: 999999;
+}
+
+.main-navigation li a {
+  font-weight: 500;
+
+  color: #464646;
+}
+
+/* .slider-hero {
+  
+      background-image: url(../img/hero-slider.jpg);
+  
+      background-repeat: no-repeat;
+  
+      background-size: cover;
+  
+      height: 950px;
+  
+  } */
+
+.text-purple {
+  color: #1b1366;
+}
+
+.text-blue {
+  color: #0071be;
+}
+
+/* buttons  */
+
+.purple-btn {
+  border-radius: 0px;
+
+  color: white;
+
+  background-color: #1b1366;
+
+  font-weight: 400 !important;
+}
+
+/* .blue-btn {
+  
+      border-radius: 0px;
+  
+      color: white;
+  
+      background-color: #0071be;
+  
+      font-weight: 400 !important;
+  
+  }
+  
+  
+  
+  .blue-btn:hover {
+  
+      background-color: #1B1366;
+  
+      color: white;
+  
+  } */
+/* Gradient */
+.blue-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  background: #0071be;
+  background-image: linear-gradient(to bottom, #0071be, #005999);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.blue-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: white;
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initial state: hidden */
+}
+
+.blue-btn span {
+  z-index: 1;
+  position: relative;
+}
+
+.blue-btn:hover::before {
+  width: 0;
+  height: 0;
+  opacity: 1; /* Show effect on hover */
+}
+
+.blue-btn:hover {
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.purple-btn:hover {
+  background-color: #0071bd;
+
+  color: white;
+}
+
+.stylish-purple-btn {
+  background-color: #1b1366;
+
+  padding: 10px 35px;
+
+  border-radius: 50px 0px 50px 0px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.stylish-blue-btn {
+  background-color: #0071bd;
+
+  padding: 10px 35px;
+
+  border-radius: 50px 0px 50px 0px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.title-font {
+  font-family: "system-ui,-apple-system," Segoe UI ",Roboto," Helvetica Neue ","
+    Noto Sans "," Liberation Sans ",Arial,sans-serif," Apple Color Emoji ","
+    Segoe UI Emoji "," Segoe UI Symbol "," Noto Color Emoji "";
+
+  font-weight: bold;
+}
+
+.body-font {
+  font-family: "system-ui,-apple-system," Segoe UI ",Roboto," Helvetica Neue ","
+    Noto Sans "," Liberation Sans ",Arial,sans-serif," Apple Color Emoji ","
+    Segoe UI Emoji "," Segoe UI Symbol "," Noto Color Emoji "";
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  font-family: "system-ui,-apple-system," Segoe UI ",Roboto," Helvetica Neue ","
+    Noto Sans "," Liberation Sans ",Arial,sans-serif," Apple Color Emoji ","
+    Segoe UI Emoji "," Segoe UI Symbol "," Noto Color Emoji "";
+
+  color: black;
+}
+
+.section-padding {
+  padding: 60px 0px;
+}
+
+.tour-section {
+  background-image: url(../img/tour-packages-bg.jpg);
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.tour-box {
+  /* border-radius: 0px 0px 10px 10px; */
+
+  -webkit-transition: transform 150ms ease-out,
+    -webkit-box-shadow 150ms ease-out, border-color 300ms ease-out,
+    border-width 300ms;
+}
+
+.tour-box a {
+  text-decoration: none;
+
+  color: #797979;
+}
+
+.contact-section {
+  background-image: url(../img/taxi-touring-sri-lanka-contact-us-bg.jpg);
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+footer {
+  background-image: url(../img/footer-bg.jpg);
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+footer {
+  background-color: #1b1465;
+
+  background-image: none;
+}
+
+footer ul {
+  padding: 0px;
+}
+
+footer ul li {
+  list-style: none;
+
+  margin-bottom: 7px;
+}
+footer ul li:nth-child(4) {
+  list-style: none;
+
+  margin-bottom: 0px;
+}
+
+.footer-title {
+  color: white;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #c6c6c6;
+}
+
+.blog-box {
+  border: 0.5px solid #79797985;
+}
+
+.blog-box p {
+  text-align: justify;
+}
+
+.footer-logo {
+  width: 135px;
+
+  border-radius: 15px;
+}
+
+.breadcrumb-head {
+  background-image: url("../img/breadcrumb beach bg.jpg");
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  padding: 275px 0px 50px 0px;
+}
+
+.breadcrumb-item a {
+  color: white;
+
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #ffffffbf;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
+
+.vision-mission {
+  padding: 50px;
+
+  border-radius: 20px;
+
+  border: 1px solid #79797985;
+
+  text-align: justify;
+}
+
+.page-link {
+  /* position: relative; */
+
+  display: block;
+
+  /* padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x); */
+
+  font-size: var(--bs-pagination-font-size);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  background-color: #0071bd;
+
+  border: 1px solid #0071bd;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  border-radius: 30px;
+
+  margin: 0px 20px;
+
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 30px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 30px;
+}
+
+body {
+  background-color: #f6f8fb;
+}
+
+.tour-box:hover {
+  box-shadow: 0 0 20px rgba(91, 91, 91, 0.5);
+
+  -moz-box-shadow: 0 0 20px rgba(91, 91, 91, 0.5);
+
+  -webkit-box-shadow: 0 0 20px rgba(91, 91, 91, 0.5);
+
+  transform: translate3d(0, 0px, 0);
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+/* tour dropdown */
+
+#tour-list {
+  position: absolute;
+
+  list-style: none;
+
+  padding: 0px;
+
+  display: none;
+
+  background-color: #ffffff;
+
+  padding-top: 43px;
+}
+
+#tour-list li {
+  padding: 15px 15px;
+
+  border-bottom: 1px solid #4a4a4a30;
+
+  background-color: #ffffff;
+}
+
+#tour-list li a {
+  text-decoration: none;
+
+  color: #5d5d5d;
+}
+
+.sticky {
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+#tour-menuId:hover + #tour-list,
+#tour-list:hover {
+  display: block;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.image-settings {
+  border-radius: 10px;
+
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navigation-bar {
+  text-align: left;
+
+  border-radius: 0px !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slider-main-text {
+  font-size: 35px;
+}
+
+.slider-paragraph {
+  font-size: 20px;
+}
+
+.carousel-caption {
+  position: absolute;
+
+  right: 15%;
+
+  top: 30%;
+
+  left: 15%;
+
+  padding-top: 1.25rem;
+
+  padding-bottom: 1.25rem;
+
+  color: #fff;
+
+  text-align: center;
+
+  bottom: 0px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  color: #fff;
+
+  text-decoration: none;
+
+  margin-right: 5px;
+
+  font-size: 18px;
+
+  border: 1px solid;
+
+  padding: 13px 15px;
+
+  line-height: unset;
+
+  border-radius: 0px;
+}
+
+.main-navigation li a {
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 0.9em;
+}
+
+.navbar-toggler {
+  border-radius: 0px;
+}
+
+#myHeader {
+  padding: 20px;
+
+  text-align: center;
+
+  background: #000000;
+
+  transition: background 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Adjust duration and easing function */
+}
+
+#myHeader.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: #000000;
+  transition: background 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media only screen and (max-width: 600px) {
+  .slider-paragraph {
+    display: none;
+  }
+
+  .slider-main-text {
+    font-size: 25px;
+  }
+
+  #tour-list {
+    position: relative;
+
+    padding-top: 0px;
+  }
+
+  .main-logo {
+    width: 75px;
+  }
+
+  footer {
+    background-color: #003253;
+
+    background-image: none;
+  }
+
+  .mobile-navbar {
+    display: block !important;
+  }
+}
